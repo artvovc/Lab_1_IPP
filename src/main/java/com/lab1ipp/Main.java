@@ -1,5 +1,8 @@
 package com.lab1ipp;
 
+import com.lab1ipp.builder.AutomobilAbstractBuilder;
+import com.lab1ipp.builder.AutomobilStandard;
+import com.lab1ipp.builder.Director;
 import com.lab1ipp.exterior.IRoata;
 import com.lab1ipp.exterior.RoataDeVara;
 import com.lab1ipp.exterior.RoataFactory;
@@ -17,12 +20,20 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        /**
+         * ABSTRACT FACTORY
+         */
         AbstractTransport at = TransportProducator.getFactory("terestru");
         TransportulPerfect.getInstance().setITransport(at.getTransportTerestru("automobil"));
-
+        /**
+         * FACTORY
+         */
         MotorFactory motorFactory = new MotorFactory();
         TransportulPerfect.getInstance().getITransport().setIMotor(motorFactory.getMotor("ardere"));
 
+        /**
+         * PROTOTYPE
+         */
         IRoata roata = new RoataDeVara(200);
         RoataFactory roataFactory = new RoataFactory();
 
@@ -36,5 +47,18 @@ public class Main {
         for (IRoata iRoata : TransportulPerfect.getInstance().getITransport().getRoti()) {
             System.out.println(iRoata.getDimensiunea());
         }
+        /**
+         * BUILDER
+         */
+        Director director = new Director();
+        AutomobilAbstractBuilder automobilAbstractBuilder = new AutomobilStandard();
+        automobilAbstractBuilder.setAutomobil(TransportulPerfect.getInstance().getITransport());
+        director.setConstructorulAutomobilului(automobilAbstractBuilder);
+        director.construiesteAutomobilul("rosie","95","tonate");
+
+        Automobil automobil = director.getAutomobil();
+
+        System.out.println(automobil);
+
     }
 }
