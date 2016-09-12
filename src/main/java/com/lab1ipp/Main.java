@@ -23,7 +23,6 @@ public class Main {
         MotorFactory motorFactory = new MotorFactory();
         TransportulPerfect.getInstance().getITransport().setIMotor(motorFactory.getMotor("ardere"));
 
-
         IRoata roata = new RoataDeVara(200);
         RoataFactory roataFactory = new RoataFactory();
 
@@ -32,7 +31,6 @@ public class Main {
         roti.add(roataFactory.getClone(roata));
         }
         TransportulPerfect.getInstance().getITransport().setRoti(roti);
-
 
         System.out.println(TransportulPerfect.getInstance());
         for (IRoata iRoata : TransportulPerfect.getInstance().getITransport().getRoti()) {

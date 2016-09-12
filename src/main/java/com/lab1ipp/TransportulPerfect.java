@@ -28,6 +28,6 @@ public class TransportulPerfect {
     @Override
     public String toString() {
         return "Transportul( viteza = "+ ITransport.getViteza()+
-                ", motor rotatii = "+ ITransport.getIMotor().getRotatii();
+                ", motor rotatii = "+ ITransport.getIMotor().getRotatii() + ", nrRoti = " +ITransport.getNrRoti()+" )";
     }
 }
