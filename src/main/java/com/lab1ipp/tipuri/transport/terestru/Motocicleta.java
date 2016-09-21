@@ -2,12 +2,12 @@ package com.lab1ipp.tipuri.transport.terestru;
 
 
 import com.lab1ipp.tipuri.transport.AbstractComponente;
-import com.lab1ipp.tipuri.transport.ITransport;
+import com.lab1ipp.tipuri.transport.CapacitateMinima;
 
 /**
  * Created by Artemie on 11.09.2016.
  */
-public class Motocicleta extends AbstractComponente implements ITransport {
+public class Motocicleta extends AbstractComponente implements CapacitateMinima {
 
     public Integer nrRoti = 2;
 

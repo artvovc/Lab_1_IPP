@@ -10,9 +10,9 @@ import java.util.List;
  */
 public interface ITransport {
     public Integer getViteza();
-    public void setIMotor(IMotor IMotor);
+    public Integer getNrRoti();
+    public void setIMotor(IMotor iMotor);
     public IMotor getIMotor();
     public void setRoti(List<IRoata> roti);
     public List<IRoata> getRoti();
-    public Integer getNrRoti();
 }

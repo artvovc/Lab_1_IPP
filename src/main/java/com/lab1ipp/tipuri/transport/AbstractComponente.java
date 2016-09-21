@@ -13,8 +13,8 @@ public abstract class AbstractComponente {
 
     private IMotor IMotor;
 
-    public void setIMotor(IMotor IMotor) {
-        this.IMotor = IMotor;
+    public void setIMotor(IMotor iMotor) {
+        this.IMotor = iMotor;
     }
 
     public IMotor getIMotor(){

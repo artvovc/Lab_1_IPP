@@ -2,12 +2,14 @@ package com.lab1ipp.tipuri.transport.terestru;
 
 
 import com.lab1ipp.tipuri.transport.AbstractComponente;
+import com.lab1ipp.tipuri.transport.CapacitateMaxima;
+import com.lab1ipp.tipuri.transport.CapacitateMinima;
 import com.lab1ipp.tipuri.transport.ITransport;
 
 /**
  * Created by Artemie on 11.09.2016.
  */
-public class Automobil extends AbstractComponente implements ITransport {
+public class Automobil extends AbstractComponente implements CapacitateMinima {
 
 
     private String motorina;
