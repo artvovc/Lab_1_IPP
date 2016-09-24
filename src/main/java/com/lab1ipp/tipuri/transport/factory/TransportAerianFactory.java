@@ -1,6 +1,8 @@
 package com.lab1ipp.tipuri.transport.factory;
 
 import com.lab1ipp.tipuri.transport.AbstractTransport;
+import com.lab1ipp.tipuri.transport.CapacitateMaxima;
+import com.lab1ipp.tipuri.transport.CapacitateMinima;
 import com.lab1ipp.tipuri.transport.ITransport;
 import com.lab1ipp.tipuri.transport.acvatic.Avion;
 import com.lab1ipp.tipuri.transport.acvatic.Elecopter;
@@ -20,6 +22,14 @@ public class TransportAerianFactory extends AbstractTransport {
     public ITransport getTransportAerian(String tipTransport) {
         if(tipTransport.equals("avion"))return new Avion();
         if(tipTransport.equals("elecopter"))return new Elecopter();
+        return null;
+    }
+
+    public CapacitateMaxima getCapMax(String tipTransport) {
+        return null;
+    }
+
+    public CapacitateMinima getCapMin(String tipTransport) {
         return null;
     }
 }

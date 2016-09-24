@@ -2,6 +2,8 @@ package com.lab1ipp.tipuri.transport.factory;
 
 
 import com.lab1ipp.tipuri.transport.AbstractTransport;
+import com.lab1ipp.tipuri.transport.CapacitateMaxima;
+import com.lab1ipp.tipuri.transport.CapacitateMinima;
 import com.lab1ipp.tipuri.transport.ITransport;
 import com.lab1ipp.tipuri.transport.terestru.Automobil;
 import com.lab1ipp.tipuri.transport.terestru.Camion;
@@ -15,6 +17,16 @@ public class TransportTerestruFactory extends AbstractTransport {
         if(tipTransport.equals("automobil"))return new Automobil();
         if(tipTransport.equals("camion"))return new Camion();
         if(tipTransport.equals("motocicleta"))return new Motocicleta();
+        return null;
+    }
+
+    @Override
+    public CapacitateMaxima getCapMax(String tipTransport) {
+        return null;
+    }
+
+    @Override
+    public CapacitateMinima getCapMin(String tipTransport) {
         return null;
     }
 
